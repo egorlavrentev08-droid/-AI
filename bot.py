@@ -31,7 +31,8 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     payload = {
         "inputs": {
             "current_date": "09.04.2026",
-            "user_name": user_name
+            "user_name": user_name,
+            "user_id": str(user_id)
         },
         "query": user_message,
         "user": str(user_id),
