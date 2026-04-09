@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  anya-bot:
+    build: .
+    container_name: anya_bot
+    restart: unless-stopped
+    volumes:
+      - ./data:/app/data
+    environment:
+      - TZ=Europe/Moscow
