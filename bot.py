@@ -66,4 +66,5 @@ def main():
     print("🤖 Аня запущена через Dify Cloud! Ожидаю сообщения...")
     app.run_polling()
 
-if __name__ == "__main__"
+if __name__ == "__main__":
+    main()
