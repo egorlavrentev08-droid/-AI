@@ -26,7 +26,8 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     
     payload = {
         "inputs": {
-            "user_message": user_message   # <-- добавили!
+            "user_message": user_message,
+            "conversation_context": ""  # <-- добавили
         },
         "query": user_message,
         "user": str(user_id),
@@ -53,7 +54,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
 def main():
     app = Application.builder().token(TELEGRAM_TOKEN).build()
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
-    print("🤖 Аня запущена!")
+    print("🤖 Аня запущена через Dify!")
     app.run_polling()
 
 if __name__ == "__main__":
