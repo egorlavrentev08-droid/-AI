@@ -25,6 +25,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     }
     
     payload = {
+        "inputs": {},  # <-- пустой объект, но поле обязательно!
         "query": user_message,
         "user": str(user_id),
         "response_mode": "blocking"
